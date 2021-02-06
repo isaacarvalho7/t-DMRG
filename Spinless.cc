@@ -8,23 +8,23 @@ int main()
     
     //Model parameter
 
-    int N = 50;
+    int N = 50; //number of sites 
     printfln("N = ",N);
                
-    Real tstep = 0.1;           
-    Real ttotal = 1.0;           
-    Real cutoff = 1E-10;           
+    Real tstep = 0.1;  //time step (smaller is generally more accurate)         
+    Real ttotal = 1.0; //total time to evolve          
+    Real cutoff = 1E-10; //truncation error cutoff when restoring MPS form       
 
     //Quench parameter
     
-    auto th = 5.0;
-    auto V0=0.5;
-    auto Vf=5.;
+    auto th = 5.0; //hopping term
+    auto V0=0.5; //initial intersite repulsion 
+    auto Vf=5.; // final intersite repulsion 
 
 
     auto sites = Fermion(N);
 
-    auto state = InitState(sites);
+    auto state = InitState(sites); //is configured for semi-filling
 
     for(auto j=1; j <=N ; j++)
         {
