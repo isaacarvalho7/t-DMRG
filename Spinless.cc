@@ -17,7 +17,7 @@ int main()
 
     //Quench parameter
     
-    auto th = 5.0; //hopping term
+    auto th = 1.0; //hopping term
     auto V0=0.5; //initial intersite repulsion 
     auto Vf=5.; // final intersite repulsion 
 
