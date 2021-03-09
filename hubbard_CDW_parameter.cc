@@ -322,7 +322,7 @@ int main(int argc, char* argv[])
             }
             //Finish the bulding of gates
 
-            gateTEvol(gates,ttstep,tstep,psiEvol,{"Cutoff=",cutoff,"Verbose=",true});
+            gateTEvol(gates,ttstep,tstep,psiEvol,{"Cutoff=",cutoff,"Verbose=",true,"UseSVD=",true,"SVDMethod=","gesdd"});
 
             tevol += ttstep;
 
