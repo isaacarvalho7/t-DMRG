@@ -3,15 +3,7 @@
 
 #include "omp.h"
 #include "thread"
-
-#include "cmath"
-#include <iostream>
-#include <ctime>
-#include <ratio>
-#include <chrono>
-
 #define MAX_DIGITS 10
-
 
 using namespace itensor;
 using std::vector;
