@@ -221,15 +221,10 @@ int main(int argc, char* argv[])
 
     printfln("|EnergyFS| - |EnergyGS| = ", sqrt(pow(energyFS,2)) - sqrt(pow(energyGS,2)));
 
-
-
-
-
-
-
+    
     ////////////////////////////////////////////////
     //                                            //
-    // Rotiona que salvar psi à medida que o tempo//
+    // Rotina que salvar psi à medida que o tempo //
     // evolui e avalia o paramentro de ordem CDW  //
     //                                            //
     ////////////////////////////////////////////////
