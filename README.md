@@ -17,7 +17,7 @@ Configuração do que será medido no quench de varredura.
 Rotina para o quench de varredura com as medias do observações: entropia vN, correlações de carga e spin, valores locais para densidade de carga e de spin. 
 
 *Linha 1134--1135*
-Rotina salvar função de onda ao término do quench de varredura e o valor dos sites. 
+Rotina para salvar função de onda ao término do quench de varredura e o valor dos sites. 
 
 Neste código não está incluso as rotinas de evolução e medida pós quench de varredura. 
 
