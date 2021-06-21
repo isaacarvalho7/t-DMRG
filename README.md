@@ -19,6 +19,8 @@ Rotina para o quench de varredura com as medias do observações: entropia vN, c
 *Linha 1134--1135*
 Rotina salvar função de onda ao término do quench de varredura e o valor dos sites. 
 
+Neste código não está incluso as rotinas de evolução e medida pós quench de varredura. 
+
 
 
 
