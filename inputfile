@@ -1,0 +1,134 @@
+input
+    {
+
+    ///////////////////////////////////   
+    // Global Calculation Parameters //
+    ///////////////////////////////////
+
+
+    L = 3        //Dimensionality
+    Npart = 3    //Filling
+
+    t1 = 1.0     //hopping first neighbor 
+    U0 = 0.0     //onsite inicial
+    V0 = 0.0     //intersite inicial
+    Uf = 1.0     //onsite final
+    Vf = 2.0     //intersite final
+    h_z = 0.0    //pinning fields (Placed at the ends of the chain)
+    tau_U = 0.01 //relaxation parameter of the sweep quench.
+    
+    nsweeps = 1     //sweep number
+    tstep = 0.05;   //accuracy of time evolution
+    cutoff = 1E-12  // cutoff of time evolution
+
+	
+    //////////////////////////////////////////////   
+    // Evolution parameters after sweep quenche //
+    //////////////////////////////////////////////
+
+
+    time_evolution = 1.0    //Total time evolution after sweep quench
+    ttstep = 0.1            //Time interval in which quantities will be measured
+
+
+    //////////////////////////////////////   
+    // Quantities that will be measured //
+    //         VERY ATTENTION           //
+    //////////////////////////////////////
+
+    //Sets this variable to
+    //Equal 1 for turn-on
+    //Equal 0 for the turn-off.
+    //Very attention!
+
+    performs_sweep_quench = 1           //Activates sweep quench		
+ 
+    DRMG_varredura_measure = 1          //Performs DMRG during sweep quench
+
+    m_cdw_measure = 1
+    m_sdw_measure = 1
+    emaranhamento_parcial_measure = 1
+    
+    a_measure_emaranhamento= 0          //Evaluates the density plot of entanglement 
+    a_measure_den_carga= 0              //Evaluates the density plot of local charge density
+    a_measure_den_sz= 0                 //Evaluates the density plot of local magnetization
+    a_measure_corr_carga= 0	        //Evaluates the density plot of charge correlations.
+    a_measure_corr_sz= 0                //Evaluates the density plot of magnetization correlations.
+    a_measure_ener_quench= 0 	        //Evaluates the energy quench.
+
+
+    turn_on_totalEvol_after = 1         //Evaluates evolution after sweep quench
+
+    turn_emaranhamento = 0              //Evaluates the density plot of entanglement
+    turn_dens_carga = 0                 //Evaluates the density plot of local charge density 
+    turn_corr_carga =0                  //Evaluates the density plot of local magnetization
+    turn_dens_sz =0                     //Evaluates the density plot of magnetization correlations.
+    turn_corr_sz=0                      //Evaluates the energy quench.
+
+    salve_psi_final_sweep_quench = 0    //Saves wave function after sweep quench 
+    salve_psi_evolution = 0             //Saves the wave function during post sweep quench evolution 
+ 
+
+
+
+    sweeps
+        {
+        maxdim  mindim  cutoff  niter  noise
+        20	10	1E-8	2	1E-8				              
+        20	10	1E-8	2	1E-8
+        30 	20	1E-9	2	1E-9
+        30	20	1E-9	2	1E-9
+  	50 	20	1E-10	2 	1E-10
+        50 	20	1E-10	2	1E-10
+  	50 	20	1E-10	2 	0
+        50 	20	1E-10	2	0
+        80 	20	1E-11	2	0
+	80	20	1E-11	2	0
+	80	20	1E-11	2	0
+	80	20	1E-11	2	0
+	100	20	1E-11	2	0
+	100	20	1E-11	2	0
+	100	20	1E-11	2	0
+	120	20	1E-12	2	0
+	120	20	1E-12	2	0
+	120	20	1E-12	2	0
+	120	20	1E-12	2	0
+	170	20	1E-12	2	0
+	170 	20	1E-12	2	0
+	170	20	1E-12	2	0
+	170 	20	1E-12	2	0
+	200 	20	1E-12	2	0
+	200 	20	1E-12	2	0
+	200 	20	1E-12	2	0
+	230	20	1E-12	2	0
+	230	20	1E-12	2	0
+	300	20	1E-12	2	0
+	300	20	1E-12	2	0
+	300	20	1E-12	2	0
+	300	20	1E-12	2	0
+	380	20	1E-12	2	0
+	380	20	1E-12	2	0
+	380	20	1E-12	2	0
+	380	20	1E-12	2	0	
+	470	20	1E-12	2	0
+	470	20	1E-12	2	0
+	500	20	1E-12	2	0
+	500	20	1E-12	2	0
+	500	20	1E-12	2	0
+	500	20	1E-12	2	0
+	570	20	1E-12	2	0
+	570	20	1E-12	2	0
+	690	20	1E-12	2	0
+	690	20	1E-12	2	0
+	820	20	1E-12	2	0
+	820	20	1E-12	2	0
+	960	20	1E-12	2	0
+	960   	20	1E-12	2	0
+	1100	20 	1E-12	2	0
+	1100	20	1E-12	2	0
+	1200	20	1E-12	2	0
+	1200	20	1E-12	2      	0	
+        }
+
+    quiet = yes
+    }
