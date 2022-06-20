@@ -15,10 +15,16 @@ As bibliotecas necessarias para a compilacao do codigo sao:
 
 4. Itensor3.0 (https://itensor.org/)
 
-
 ## Documentacao 
 
 A documentacao do modulo principal (sweep_quenches.cc) bem como outros detalhes da implementacao podem ser obtidos no Design Documento disponivel no diretorio doc.
+
+## Paralelizacao 
+
+O codigo foi paralelizado para arquitetura de memoria compartilhada via instrucoes OpenMP (https://www.openmp.org/).
+Para controlar esse nivel de otimizacao e recomendado fazer uso da opcao:
+
+export OMP_NUM_THREADS = numero de threads
 
 
 ## Breve descrição do código time-dependent DMRG
