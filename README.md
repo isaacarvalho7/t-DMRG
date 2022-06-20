@@ -3,6 +3,13 @@
 Codigo que ..... para o modelo de Hubbard extendido (EHM) ....
 Descrever as funções do código (básicos) - Hubbard, cada repositório tem
 
+## Diretorios
+
+1. Doc : Diretorio contendo Design Document 
+2. Ed_hubbard: Diretorio contendo codigo para diagonalizacao exata (ED) do modelo de Hubbard extendido.
+3. Principal: Contem o codigo sweep_quench.cc que o modulo principal do codigo t-DMRG.
+
+
 ## Compilacao
 
 As bibliotecas necessarias para a compilacao do codigo sao:
