@@ -1,7 +1,11 @@
 # Time-dependent DMRG (t-DMRG)
 
-Codigo que ..... para o modelo de Hubbard extendido (EHM) ....
-Descrever as funções do código (básicos) - Hubbard, cada repositório tem
+//Codigo que ..... para o modelo de Hubbard extendido (EHM) ....
+//Descrever as funções do código (básicos) - Hubbard, cada repositório tem
+
+This code describes the one dimensional extend Hubbard model (EHM) within equilibrium and non-equilibrium behavior. 
+We use Density Renormalization Group (DMRG) within tensor networks and its temporal extension (tDMRG). 
+The code evaluates the correlations functions and local densities for spin e charger, entanglement entropy for bipartite system, fidelity between ground and evolved state, energy quench and energy variance erro. 
 
 ## Diretorios
 
