@@ -15,7 +15,7 @@ The code evaluates the correlations functions and local densities for spin e cha
 
 The libraries needed to compile the code are:
 
-1. Compiladores GNU ( versao >= 7.5.0)
+1. GNU compilers ( version >= 7.5.0)
 
 2. OpenBLas (https://www.openblas.net/)
 
@@ -29,10 +29,10 @@ The documentation of the main module (sweep_quenches.cc) as well as other implem
 
 ## Parallelization
 
-The code was parallelized for shared memory architecture via OpenMP instructions (https://www.openmp.org/).
+The code is parallelized for shared memory architectures using OpenMP instructions (https://www.openmp.org/).
 To control this level of optimization it is recommended to make use of the option:
 
-export OMP_NUM_THREADS = numero de threads
+export OMP_NUM_THREADS = number of threads
 
 
 ## Description of the time-dependent DMRG code
