@@ -1,6 +1,6 @@
 # Time-dependent DMRG (t-DMRG)
 
-This code describes the one dimensional extend Hubbard model (EHM) within equilibrium and non-equilibrium behavior. 
+This code describes the one dimensional extend Hubbard model (EHM) at the equilibrium and non-equilibrium behaviors. 
 We use Density Renormalization Group (DMRG)[1] within tensor networks [2] and its temporal extension, namely time-dependent DRMG (tDMRG). 
 The code evaluates the correlations functions and local densities for spin e charger, entanglement entropy for bipartite system, fidelity between ground and evolved state, energy quench and energy variance error. 
 
