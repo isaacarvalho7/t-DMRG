@@ -615,6 +615,77 @@ int main(int argc, char* argv[])
         cout << "#gsevolti " << lt*del_t << " " << abs(innerC(psi_Evol,psi_GS)) << endl;
 
 
+        if(lt == 0)
+        {
+            printfln("\nQuantidades iniciais\n");
+
+            for(int j = 1; j <= L ; j++)
+                {
+                    psi_Evol.position(j);
+                    auto ket = psi_Evol(j);
+                    auto bra = dag(prime(ket,"Site"));
+                    auto N_op = op(sites,"Sz",j);
+                    auto Ntot = eltC(bra*N_op*ket).real();
+                    auto mag_Evol = Ntot;
+
+                    psi_Evol.position(j);
+                    ket = psi_Evol(j);
+                    bra = dag(prime(ket,"Site"));
+                    N_op = op(sites,"Nup",j);
+                    Ntot = eltC(bra*N_op*ket).real();
+                    auto nup_Evol = Ntot;
+
+                    psi_Evol.position(j);
+                    ket = psi_Evol(j);
+                    bra = dag(prime(ket,"Site"));
+                    N_op = op(sites,"Ndn",j);
+                    Ntot = eltC(bra*N_op*ket).real();
+                    auto ndn_Evol = Ntot;
+
+                    psi_GS.position(j);
+                    ket = psi_GS(j);
+                    bra = dag(prime(ket,"Site"));
+                    N_op = op(sitesDMRG,"Sz",j);
+                    Ntot = eltC(bra*N_op*ket).real();
+                    auto mag_GS = Ntot;
+
+                    psi_GS.position(j);
+                    ket = psi_GS(j);
+                    bra = dag(prime(ket,"Site"));
+                    N_op = op(sitesDMRG,"Nup",j);
+                    Ntot = eltC(bra*N_op*ket).real();
+                    auto nup_GS = Ntot;
+
+                    psi_GS.position(j);
+                    ket = psi_GS(j);
+                    bra = dag(prime(ket,"Site"));
+                    N_op = op(sitesDMRG,"Ndn",j);
+                    Ntot = eltC(bra*N_op*ket).real();
+                    auto ndn_GS = Ntot;
+
+                    cout << "#Nevol_Ntot_f " << j << " " << nup_Evol+ndn_Evol  << "\n";
+                    cout << "#Nevol_Nup_f " << j << " " << nup_Evol << "\n";
+                    cout << "#Nevol_Nd_f " << j << " " << ndn_Evol << "\n";
+                    cout << "#Nevol_magz_f " << j << " " << mag_Evol << "\n";
+
+                    cout << "#Ngs_Ntot_f " << j << " " << nup_GS+ndn_GS  << "\n";
+                    cout << "#Ngs_Nup_f " << j << " " << nup_GS << "\n";
+                    cout << "#Ngs_Ndn_f " << j << " " << ndn_GS << "\n";
+                    cout << "#Ngs_magz_f " << j << " " << mag_GS << "\n";
+
+                    auto d_dens = sqrt(pow(nup_Evol + ndn_Evol - nup_GS - ndn_GS,2));
+                    auto d_mag = sqrt(pow(mag_GS-mag_Evol,2));
+
+                    cout << "dif_evol_GS_n_f " << j << " " << d_dens << "\n";
+                    cout << "dif_evol_GS_m_f " << j << " " << d_mag << "\n";
+
+                }//fecha for(int j = 1; j <= L ; j++)
+
+                printfln("\n\nINICIAL DO QUENCH DE VARREDURA\n\n");
+
+        }//fecha if(lt == n_loop)
+
+
 
         //! Medição do parâmetro m_cdw para psi_Evol e psi_GS
         if(m_cdw_measure == 1)
